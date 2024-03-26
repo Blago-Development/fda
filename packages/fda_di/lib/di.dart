@@ -1,1 +1,1 @@
-export 'package:fda_di/di.dart';
+export 'package:fda_di/src/di.dart';
