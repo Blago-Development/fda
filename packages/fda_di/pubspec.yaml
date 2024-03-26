@@ -1,0 +1,17 @@
+name: fda_di
+description: The dependency injection tools for the feature driven architecture.
+version: 0.0.1
+repository: https://github.com/Blago-Development/fda
+publish_to: none
+
+environment:
+  sdk: ^3.3.2
+
+dependencies:
+  get_it: ^7.6.7
+
+dev_dependencies:
+  blg_linter:
+    git:
+      url: https://github.com/Blago-Development/blg_linter.git
+      ref: 1.0.0
