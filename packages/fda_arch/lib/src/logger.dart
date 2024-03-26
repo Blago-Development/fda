@@ -9,3 +9,5 @@ void logWarning(String message, {Object? warning, StackTrace? stackTrace}) =>
 
 void logInfo(String message, {Object? error}) =>
     di<Logger>().i(message, error: error);
+
+void assembleLogger() => diProvider.registerSingleton(Logger.new);

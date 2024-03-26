@@ -1,6 +1,6 @@
 name: fda_arch
 description: The architecture tools for the feature driven architecture.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/Blago-Development/fda
 publish_to: none
 
