@@ -1,6 +1,6 @@
 name: fda
 description: The feature driven architecture package.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/Blago-Development/fda
 publish_to: none
 
@@ -12,7 +12,7 @@ dependencies:
     git:
       url: https://github.com/Blago-Development/fda.git
       path: packages/fda_arch
-      ref: arch_0.0.1
+      ref: arch_0.0.2
   fda_di:
     git:
       url: https://github.com/Blago-Development/fda.git
