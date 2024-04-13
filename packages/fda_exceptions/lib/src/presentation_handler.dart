@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:fda_exceptions/exceptions.dart';
-import 'package:fda_exceptions/src/exception_event.dart';
 import 'package:fda_logger/logger.dart';
 
 extension FuturePresentationHandlerExtension<T, R> on Future<T> {

@@ -14,6 +14,37 @@ base class NotInitializedException extends DataException {
   static const String staticCode = 'not_initialized';
 }
 
+final class InternetConnectivityException extends DataException {
+  const InternetConnectivityException()
+      : super(staticCode, 'Internet connectivity exception.');
+
+  static const String staticCode = 'internet_connectivity_exception';
+}
+
+base class BadRequestException extends DataException {
+  const BadRequestException(String message)
+      : super(specificCode, 'Bad data request. $message');
+
+  const BadRequestException.withCode(String code, String message)
+      : super(specificCode, 'Bad data request. Code: $code. $message');
+
+  static const String specificCode = 'bad_data_request';
+}
+
+base class UnauthorizedException extends DataException {
+  const UnauthorizedException() : super(staticCode, 'Unauthorized exception.');
+
+  const UnauthorizedException.typed(Type type)
+      : super(staticCode, 'Unauthorized exception for $type.');
+
+  const UnauthorizedException.detailed({
+    required Type type,
+    required String message,
+  }) : super(staticCode, 'Unauthorized exception for $type. $message');
+
+  static const String staticCode = 'unauthorized_exception';
+}
+
 base class NoDataFoundException extends DataException {
   const NoDataFoundException() : super(staticCode, 'Some data not found.');
 
@@ -26,12 +57,17 @@ base class NoDataFoundException extends DataException {
   static const String staticCode = 'no_data_found';
 }
 
-base class BadRequestException extends DataException {
-  const BadRequestException(String message)
-      : super(specificCode, 'Bad data request. $message');
+base class ClientInternalException extends DataException {
+  const ClientInternalException()
+      : super(staticCode, 'Client internal exception.');
 
-  const BadRequestException.withCode(String code, String message)
-      : super(specificCode, 'Bad data request. Code: $code. $message');
+  const ClientInternalException.typed(Type type)
+      : super(staticCode, 'Client internal exception for $type.');
 
-  static const String specificCode = 'bad_data_request';
+  const ClientInternalException.detailed({
+    required Type type,
+    required String message,
+  }) : super(staticCode, 'Client internal exception for $type. $message');
+
+  static const String staticCode = 'client_internal_exception';
 }
