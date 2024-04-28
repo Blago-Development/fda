@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:fda_exceptions/exceptions.dart';
-import 'package:fda_exceptions/src/exception_event.dart';
 import 'package:fda_logger/logger.dart';
 
 extension FuturePresentationHandlerExtension<T, R> on Future<T> {
@@ -24,7 +23,7 @@ extension FuturePresentationHandlerExtension<T, R> on Future<T> {
         (error, stackTrace) {
           final exception = error is AppException
               ? error
-              : UndefinedPresentationException(error.toString());
+              : UndefinedPresentationException.custom(error.toString());
           _logAndAddExceptionToSink(exception, stackTrace);
           return null;
         },
