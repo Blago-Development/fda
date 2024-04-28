@@ -23,7 +23,7 @@ extension FuturePresentationHandlerExtension<T, R> on Future<T> {
         (error, stackTrace) {
           final exception = error is AppException
               ? error
-              : UndefinedPresentationException(error.toString());
+              : UndefinedPresentationException.custom(error.toString());
           _logAndAddExceptionToSink(exception, stackTrace);
           return null;
         },
