@@ -1,6 +1,6 @@
 name: fda_logger
 description: The logger approach for feature driven architecture.
-version: 0.0.1
+version: 0.0.2
 publish_to: none
 
 environment:
