@@ -6,19 +6,23 @@ abstract base class PresentationException extends AppException {
 
 final class UndefinedPresentationException extends PresentationException {
   const UndefinedPresentationException()
-      : super(staticCode, 'Undefined presentation exception.');
+      : super(defaultCode, 'Undefined presentation exception.');
 
-  const UndefinedPresentationException.custom(String message)
-      : super(staticCode, 'Undefined presentation exception. $message');
+  const UndefinedPresentationException.message(String message)
+      : super(defaultCode, 'Undefined presentation exception. $message');
 
-  static const String staticCode = 'undefined_presentation_exception';
+  const UndefinedPresentationException.custom(super.code, super.message);
+
+  static const String defaultCode = 'undefined_presentation_exception';
 }
 
 abstract base class ValidationException extends PresentationException {
-  const ValidationException() : super(staticCode, 'Validation exception.');
+  const ValidationException() : super(defaultCode, 'Validation exception.');
 
-  const ValidationException.custom(String message)
-      : super(staticCode, 'Validation exception. $message');
+  const ValidationException.message(String message)
+      : super(defaultCode, 'Validation exception. $message');
 
-  static const String staticCode = 'validation_exception';
+  const ValidationException.custom(super.code, super.message);
+
+  static const String defaultCode = 'validation_exception';
 }

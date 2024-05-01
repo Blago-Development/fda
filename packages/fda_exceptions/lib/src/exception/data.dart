@@ -7,85 +7,101 @@ abstract base class DataException extends AppException {
 base class NotInitializedException extends DataException {
   const NotInitializedException()
       : super(
-          staticCode,
+          defaultCode,
           'Not initialized exception. Some dependency has not yet initialized.',
         );
 
-  const NotInitializedException.custom(String message)
-      : super(staticCode, 'Not initialized exception. $message');
+  const NotInitializedException.message(String message)
+      : super(defaultCode, 'Not initialized exception. $message');
 
-  static const String staticCode = 'not-initialized';
+  const NotInitializedException.custom(super.code, super.message);
+
+  static const String defaultCode = 'not-initialized';
 }
 
 base class InternetConnectivityException extends DataException {
   const InternetConnectivityException()
-      : super(staticCode, 'Internet connectivity exception.');
+      : super(defaultCode, 'Internet connectivity exception.');
 
-  const InternetConnectivityException.custom(String message)
-      : super(staticCode, 'Internet connectivity exception. $message');
+  const InternetConnectivityException.message(String message)
+      : super(defaultCode, 'Internet connectivity exception. $message');
 
-  static const String staticCode = 'internet-connectivity-exception';
+  const InternetConnectivityException.custom(super.code, super.message);
+
+  static const String defaultCode = 'internet-connectivity-exception';
 }
 
 base class ClientConnectivityException extends DataException {
   const ClientConnectivityException()
       : super(
-          staticCode,
+          defaultCode,
           'Client connectivity exception. The client could not be reached.',
         );
 
-  const ClientConnectivityException.custom(String message)
-      : super(staticCode, 'Client connectivity exception. $message');
+  const ClientConnectivityException.message(String message)
+      : super(defaultCode, 'Client connectivity exception. $message');
 
-  static const String staticCode = 'client-connectivity-exception';
+  const ClientConnectivityException.custom(super.code, super.message);
+
+  static const String defaultCode = 'client-connectivity-exception';
 }
 
 base class BadRequestException extends DataException {
-  const BadRequestException() : super(specificCode, 'Bad data request.');
+  const BadRequestException() : super(defaultCode, 'Bad data request.');
 
-  const BadRequestException.custom(String message)
-      : super(specificCode, 'Bad data request. $message');
+  const BadRequestException.message(String message)
+      : super(defaultCode, 'Bad data request. $message');
 
-  static const String specificCode = 'bad-data-request';
+  const BadRequestException.custom(super.code, super.message);
+
+  static const String defaultCode = 'bad-data-request';
 }
 
 base class UnauthorizedException extends DataException {
-  const UnauthorizedException() : super(staticCode, 'Unauthorized exception.');
+  const UnauthorizedException() : super(defaultCode, 'Unauthorized exception.');
 
-  const UnauthorizedException.custom(String message)
-      : super(staticCode, 'Unauthorized exception. $message');
+  const UnauthorizedException.message(String message)
+      : super(defaultCode, 'Unauthorized exception. $message');
 
-  static const String staticCode = 'unauthorized-exception';
+  const UnauthorizedException.custom(super.code, super.message);
+
+  static const String defaultCode = 'unauthorized-exception';
 }
 
 base class NoAccessException extends DataException {
-  const NoAccessException() : super(staticCode, 'No access exception.');
+  const NoAccessException() : super(defaultCode, 'No access exception.');
 
-  const NoAccessException.custom(String message)
-      : super(staticCode, 'No access exception. $message');
+  const NoAccessException.message(String message)
+      : super(defaultCode, 'No access exception. $message');
 
-  static const String staticCode = 'no-access-exception';
+  const NoAccessException.custom(super.code, super.message);
+
+  static const String defaultCode = 'no-access-exception';
 }
 
 base class NoDataFoundException extends DataException {
   const NoDataFoundException()
       : super(
-          staticCode,
+          defaultCode,
           'No data found exception. Some data not found.',
         );
 
-  const NoDataFoundException.custom(String message)
-      : super(staticCode, 'No data found exception. $message');
+  const NoDataFoundException.message(String message)
+      : super(defaultCode, 'No data found exception. $message');
 
-  static const String staticCode = 'no-data-found';
+  const NoDataFoundException.custom(super.code, super.message);
+
+  static const String defaultCode = 'no-data-found';
 }
 
 base class ClientInternalException extends DataException {
   const ClientInternalException()
-      : super(staticCode, 'Client internal exception.');
+      : super(defaultCode, 'Client internal exception.');
 
-  const ClientInternalException.custom(String message)
-      : super(staticCode, 'Client internal exception. $message');
+  const ClientInternalException.message(String message)
+      : super(defaultCode, 'Client internal exception. $message');
 
-  static const String staticCode = 'client-internal-exception';
+  const ClientInternalException.custom(super.code, super.message);
+
+  static const String defaultCode = 'client-internal-exception';
 }
