@@ -105,3 +105,14 @@ base class ClientInternalException extends DataException {
 
   static const String defaultCode = 'client-internal-exception';
 }
+
+base class ParsingException extends DataException {
+  const ParsingException() : super(defaultCode, 'Data parsing exception.');
+
+  const ParsingException.message(String message)
+      : super(defaultCode, 'Data parsing exception. $message');
+
+  const ParsingException.custom(super.code, super.message);
+
+  static const String defaultCode = 'incorrect-parsing';
+}
