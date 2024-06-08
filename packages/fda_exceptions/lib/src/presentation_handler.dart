@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:fda_exceptions/exceptions.dart';
 import 'package:fda_logger/logger.dart';
 
-extension FuturePresentationHandlerExtension<T, R> on Future<T> {
-  Future<R?> handle(
+extension FuturePresentationHandlerExtension<T> on Future<T> {
+  Future<R?> handle<R>(
     R Function(T value) onSuccess, {
     R? Function(AppException exception)? onError,
     void Function()? whenComplete,

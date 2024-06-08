@@ -13,7 +13,7 @@ final class UndefinedPresentationException extends PresentationException {
 
   const UndefinedPresentationException.custom(super.code, super.message);
 
-  static const String defaultCode = 'undefined_presentation_exception';
+  static const String defaultCode = 'undefined-presentation-exception';
 }
 
 abstract base class ValidationException extends PresentationException {
@@ -24,5 +24,5 @@ abstract base class ValidationException extends PresentationException {
 
   const ValidationException.custom(super.code, super.message);
 
-  static const String defaultCode = 'validation_exception';
+  static const String defaultCode = 'validation-exception';
 }
