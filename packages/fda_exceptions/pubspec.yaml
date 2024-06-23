@@ -11,12 +11,12 @@ dependencies:
     git:
       url: https://github.com/Blago-Development/fda.git
       path: packages/fda_di
-      ref: di_0.0.2
+      ref: di_0.0.3
   fda_logger:
     git:
       url: https://github.com/Blago-Development/fda.git
       path: packages/fda_logger
-      ref: logger_0.0.2
+      ref: logger_0.0.3
 
 dev_dependencies:
   blg_linter:
